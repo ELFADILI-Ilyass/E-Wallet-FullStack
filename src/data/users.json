@@ -1,0 +1,82 @@
+{
+  "users": [
+    {
+      "nom": "Ilyass EL FADILI",
+      "email": "ilyass@gmail.com",
+      "password": "2004",
+      "numCompte": "200426",
+      "balance": 33600,
+      "transaction": [
+        {
+          "date": "2025-03-18",
+          "description": "Paiement Service",
+          "type": "-",
+          "montant": 100
+        },
+        {
+          "date": "2025-05-24",
+          "description": "Paiement Service",
+          "type": "-",
+          "montant": 200
+        },
+        {
+          "date": "2026-01-18",
+          "description": "Transfert vers Ahmed",
+          "type": "-",
+          "montant": 1000
+        },
+        {
+          "date": "2026-01-18",
+          "description": "Paiement Service",
+          "type": "-",
+          "montant": 200
+        },
+        {
+          "date": "2026-01-18",
+          "description": "Recharge depuis PayPal",
+          "type": "+",
+          "montant": 5000
+        }
+      ],
+      "comptes": [
+        {
+          "type": "Visa",
+          "solde": 20000,
+          "icon": "💳"
+        },
+        {
+          "type": "PayPal",
+          "solde": 0,
+          "icon": "🅿️"
+        },
+        {
+          "type": "Crypto",
+          "solde": 5000,
+          "icon": "₿"
+        }
+      ]
+    },
+    {
+      "nom": "Ahmed",
+      "email": "ahmed@gmail.com",
+      "password": "1234",
+      "numCompte": "2007",
+      "balance": 24000,
+      "transaction": [
+        {
+          "date": "2026-01-18",
+          "description": "Reçu de Ilyass EL FADILI",
+          "type": "+",
+          "montant": 1000
+        }
+      ],
+      "comptes": [
+        {
+          "type": "Visa ",
+          "solde": 5000,
+          "icon": "💳"
+        }
+      ]
+    }
+  ]
+}
