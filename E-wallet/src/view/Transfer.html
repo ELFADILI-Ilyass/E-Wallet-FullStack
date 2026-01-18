@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transfert - E-Wallet</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/dashboard.css">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="/assets/e-Wallet6.gif" alt="Logo E-Wallet">
+      <h2>E-Wallet</h2>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="dashboard.html">Tableau de bord</a></li>
+      <li class="active"><a href="#">Transférer</a></li>
+      <li><a href="#">Profil</a></li>
+      <li><a href="index.html">Se déconnecter</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="topbar">
+      <h1>Effectuer un transfert</h1>
+    </header>
+
+    <section class="dashboard-cards">
+      <div class="card">
+
+          <div style="margin-bottom: 15px;">
+            <label>Numéro de compte du destinataire</label><br>
+            <input 
+              type="text" 
+              id="numCompte" 
+              required
+              placeholder="Ex: 123456"
+              style="width:100%; padding:10px; border-radius:10px; border:1px solid #ccc;"
+            >
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label>Montant</label><br>
+            <input 
+              type="number" 
+              id="amount" 
+              required
+              placeholder="Ex: 500"
+              style="width:100%; padding:10px; border-radius:10px; border:1px solid #ccc;"
+            >
+          </div>
+
+          <div class="card-actions">
+            <button  id ="valider">
+              <img src="/assets/payer.png" alt="Valider">
+              Valider le transfert
+            </button>
+            <button type="button" onclick="window.location.href='dashboard.html'">
+              Annuler
+            </button>
+          </div>
+
+
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/Controller/transferer.js"></script>
+</body>
+</html>

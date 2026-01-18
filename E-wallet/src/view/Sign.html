@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Wallet | Inscription</title>
+
+  <!-- CSS commun -->
+  <link rel="stylesheet" href="/src/css/style.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <a href="/index.html" class="logo">
+        <img src="/assets/e-wallet.png" alt="Logo E-Wallet">
+      </a>
+      <ul class="nav-links">
+        <li><a href="/index.html">Accueil</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Fonctionnalités</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section class="hero">
+
+      <!-- Signup content -->
+      <div class="hero-content">
+        <h1>Inscription</h1>
+        <p>
+          Créez votre compte E-Wallet et commencez à gérer vos finances en toute simplicité.
+        </p>
+
+        <div id="error"></div>
+
+        <form class="login-form">
+
+          <!-- Nom complet -->
+          <div class="input-group">
+            <input
+              id="fullname"
+              type="text"
+              placeholder="Nom complet"
+              required
+            >
+          </div>
+
+          <!-- Email -->
+          <div class="input-group">
+            <input
+              id="mail"
+              type="email"
+              placeholder="Adresse e-mail"
+              required
+            >
+          </div>
+
+          <!-- Mot de passe -->
+          <div class="input-group">
+            <input
+              id="password"
+              type="password"
+              placeholder="Mot de passe"
+              required
+            >
+            <span id="displayPassword" class="toggle-password">👁</span>
+          </div>
+
+          <!-- Confirmation mot de passe -->
+          <div class="input-group">
+            <input
+              id="confirmPassword"
+              type="password"
+              placeholder="Confirmer le mot de passe"
+              required
+            >
+          </div>
+          <p id="result"></p>
+          <button id="signupbtn" type="button" class="btn btn-primary">
+            S’inscrire
+          </button>
+        </form>
+
+        <p style="margin-top: 15px; font-size: 0.9rem;">
+          Vous avez déjà un compte ?
+          <a href="/src/View/login.html" style="color:#3b66f6; font-weight:600;">
+            Se connecter
+          </a>
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-image">
+        <img src="/assets/e-Wallet6.gif" alt="Illustration inscription">
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 E-Wallet. Tous droits réservés.</p>
+  </footer>
+
+  <!-- JS -->
+  <script type="module" src="/src/Controller/sign.js"></script>
+
+</body>
+</html>

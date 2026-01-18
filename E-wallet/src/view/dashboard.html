@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord E-Wallet</title>
+  <link rel="stylesheet" href="/src/css/dashboard.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="/assets/e-Wallet6.gif" alt="Logo E-Wallet">
+      <h2>E-Wallet</h2>
+    </div>
+    <ul class="sidebar-menu">
+      <li class="active"><a href="#">Tableau de bord</a></li>
+      <li><a href="Transfer.html">Transferer</a></li>
+      <li><a href="recharger.html">Recharger</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="index.html">Se déconnecter</a></li>
+    </ul>
+  </aside>
+
+  <!-- Contenu principal -->
+  <main class="main-content">
+    <header class="topbar">
+      <h1 id="welcome_message"> </h1>
+      <span id="date" class="topbar-date"> </span>
+    </header>
+
+    <!-- Cartes du dashboard -->
+    <section class="dashboard-cards">
+      <div class="card balance-card">
+        <h3>Solde total</h3>
+        <h1 id="balance"> </h1>
+        <!-- Actions -->
+  <div class="card-actions">
+    <button id="transferer">
+      <img src="/assets/depot.png" alt="Transférer">
+      Transférer
+    </button>
+
+    <button id="recharger">
+      <img src="/assets/trans.png" alt="Recharger">
+      Recharger
+    </button>
+
+    <button id="payer">
+      <img src="/assets/payer.png" alt="Payer">
+      Payer
+    </button>
+  </div>
+      </div>
+     
+      <div class="card stats-card">
+         <select name="options" id="filterX" >
+        <option value="T">Toutes</option>
+        <option  value="E">Entrer</option>
+        <option  value="S">Sortie</option>
+      </select>
+        <h3>Transactions récentes</h3>
+        <table id ="transactions" class="transactions-table">
+          <thead>
+        <tr>
+         <th>Date</th>
+         <th>Description</th>
+         <th>Type</th>
+         <th>Montant</th>
+      </tr>
+     </thead>
+      <tbody id="BigTab">
+    <!-- Les transactions seront injectées ici -->
+  </tbody>
+        </table>
+      </div>
+      </div>
+      <div class="card accounts-card">
+        <h3>Mes Comptes & Cartes</h3>
+        <div id="accounts-container" class="accounts-grid">
+          </div>
+    </section>
+    
+ <div id="paymentContainer" style="display: none; margin-top: 20px;" class="card">
+    <h3>Effectuer un Paiement</h3>
+    <div id="paymentArea">
+        Montant: <input type="number" id="prixInput" placeholder="0">
+        N°Compte: <input type="password" id="passInput" placeholder="••••">
+        <button id="Confirm">Confirmer</button>
+    </div>
+    <div id="paymentStatus"></div>
+
+</div>
+</div>
+</div>
+  </main>
+  <script type="module" src="/src/Controller/dashboard.js"></script>
+</body>
+</html>
